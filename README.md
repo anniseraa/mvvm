@@ -9,7 +9,7 @@ Aplikasi pencatat daftar tontonan (film dan drama) sederhana berbasis **Jetpack 
 
 1. Anjalin Aida Faza2 (24523003)= Perancangan masalah & solusi, Model Data (`Movie`), dan `WatchListUiState` 
 2. Annisa Ramadhani (24523018)= Implementasi `WatchListViewModel`, pengelolaan `StateFlow`, dan validasi input
-3. Aulia Fakhirah Hendraini (24523003)= Implementasi UI Compose (`WatchListScreen`), Adaptive Layout, dan dokumentasi
+3. Aulia Fakhirah Hendraini (24523020)= Implementasi UI Compose (`WatchListScreen`), Adaptive Layout, dan dokumentasi
 
 ---
 

@@ -60,11 +60,6 @@ Berikut adalah satu contoh alur **Unidirectional Data Flow (UDF)** saat pengguna
 
 ---
 
-## Slide Presentasi
-
-- Tautan / File Slide Presentasi (Maksimal 5 Halaman): `[Tambahkan link atau path file slide di sini]`
-
----
 
 ## Cara Menjalankan Proyek
 

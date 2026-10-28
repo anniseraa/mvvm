@@ -31,8 +31,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.watchlist.data.Movie
-import com.example.watchlist.ui.theme.WatchListTheme
+import com.example.watchlistproject.data.Movie
+import com.example.watchlistproject.ui.theme.WatchListProjectTheme
 
 @Composable
 fun WatchListScreen(
@@ -275,7 +275,7 @@ private fun MovieList(
 @Preview(showBackground = true, widthDp = 360, heightDp = 640, name = "Layar Sempit (Portrait)")
 @Composable
 private fun WatchListScreenNarrowPreview() {
-    WatchListTheme {
+    WatchListProjectTheme {
         WatchListScreen(
             uiState = WatchListUiState(
                 movies = listOf(
@@ -294,7 +294,7 @@ private fun WatchListScreenNarrowPreview() {
 @Preview(showBackground = true, widthDp = 720, heightDp = 360, name = "Layar Lebar (Landscape)")
 @Composable
 private fun WatchListScreenWidePreview() {
-    WatchListTheme {
+    WatchListProjectTheme {
         WatchListScreen(
             uiState = WatchListUiState(
                 movies = listOf(

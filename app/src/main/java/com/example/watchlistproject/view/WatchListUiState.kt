@@ -31,8 +31,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.watchlist.data.Movie
-import com.example.watchlist.ui.theme.WatchListTheme
+import com.example.watchlistproject.data.Movie
+import com.example.watchlistproject.ui.theme.WatchListTheme
 
 @Composable
 fun WatchListScreen(

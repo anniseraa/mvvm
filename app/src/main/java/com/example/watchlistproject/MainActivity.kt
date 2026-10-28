@@ -12,9 +12,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.watchlist.ui.theme.WatchListTheme
-import com.example.watchlist.view.WatchListScreen
-import com.example.watchlist.viewmodel.WatchListViewModel
+import com.example.watchlistproject.ui.theme.WatchListProjectTheme
+import com.example.watchlistproject.view.WatchListScreen
+import com.example.watchlistproject.viewmodel.WatchListViewModel
 
 class MainActivity : ComponentActivity() {
 
@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
 
         setContent {
-            WatchListTheme {
+            WatchListProjectTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background

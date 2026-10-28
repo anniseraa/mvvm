@@ -1,4 +1,4 @@
-package com.example.watchlist
+package com.example.watchlistproject
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.watchlist.ui.theme.WatchListTheme
+import com.example.watchlist.view.WatchListScreen
 import com.example.watchlist.viewmodel.WatchListViewModel
 
 class MainActivity : ComponentActivity() {
@@ -40,4 +41,12 @@ fun WatchListApp(
 ) {
     val uiState by watchListViewModel.uiState
         .collectAsStateWithLifecycle()
+
+    WatchListScreen(
+        uiState = uiState,
+        onTitleChange = watchListViewModel::onTitleChange,
+        onAddMovie = watchListViewModel::addMovie,
+        onToggleWatched = watchListViewModel::toggleWatched,
+        onDeleteMovie = watchListViewModel::deleteMovie
+    )
 }

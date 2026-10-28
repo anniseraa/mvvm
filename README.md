@@ -52,10 +52,11 @@ Berikut adalah satu contoh alur **Unidirectional Data Flow (UDF)** saat pengguna
 ## Screenshot Dua Ukuran Layar
 
 ### 1. Layar Sempit (Portrait)
-<img width="630" height="476" alt="portrait" src="https://github.com/user-attachments/assets/bee0de70-02f6-483b-a0f8-2d021075534a" />
+<img width="630" height="476" alt="portrait" src="https://github.com/user-attachments/assets/91f3d814-7b30-4532-8ece-a091746c1564" />
+
 
 ### 2. Layar Lebar (Landscape)
-<img width="650" height="498" alt="landscape" src="https://github.com/user-attachments/assets/dde647e5-2ea5-43ee-b294-d5f243c8ca9a" />
+<img width="650" height="498" alt="landscape" src="https://github.com/user-attachments/assets/4eb4ed44-f26b-4765-bafd-1823cefb5693" />
 
 ---
 

@@ -34,18 +34,14 @@ Aplikasi pencatat daftar tontonan (film dan drama) sederhana berbasis **Jetpack 
 
 ## Contoh Alur UDF (Unidirectional Data Flow)
 
-Alur Data Satu Arah (UDF) Saat Menambah Film Baru:
 
-1. Event UI (Layar → ViewModel):
-Pengguna mengetik judul film lalu menekan tombol "Tambah ke WatchList". Aksi ini memicu fungsi addMovie() di ViewModel.
+1. Event UI: Saat pengguna menekan tombol 'Tambah ke WatchList', layar memicu fungsi addMovie() di ViewModel.
 
-2. Pemrosesan di ViewModel:
-ViewModel memeriksa judul yang dimasukkan:
-- Jika kosong: Menampilkan pesan error peringatan.
-- Jika valid: Membuat data film baru, menambahkannya ke dalam daftar, mengosongkan kolom input teks, dan menghapus pesan error.
+2. ViewModel: ViewModel memeriksa input tersebut. Karena judul valid, ViewModel membuat objek Movie baru.
 
-3. Pembaruan Tampilan UI (ViewModel → Layar):
-Layar selalu memantau perubahan data. Begitu data baru masuk, Jetpack Compose otomatis memperbarui tampilan layar secara instan: kotak ketikan kembali kosong dan kartu film baru langsung muncul di daftar.
+3. Perubahan UiState: ViewModel memperbarui WatchListUiState dengan memasukkan film baru ke list movies dan mengosongkan kembali titleInput.
+
+4. Pembaruan UI: Layar yang memantau uiState via collectAsStateWithLifecycle() langsung melakukan recomposition secara otomatis—kotak input kembali bersih dan kartu film baru seketika muncul di daftar tontonan tanpa perlu refresh manual."
 
 ---
 

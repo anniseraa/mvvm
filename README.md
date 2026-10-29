@@ -48,11 +48,10 @@ Aplikasi pencatat daftar tontonan (film dan drama) sederhana berbasis **Jetpack 
 ## Screenshot Dua Ukuran Layar
 
 ### 1. Layar Sempit (Portrait)
-<img width="630" height="476" alt="portrait" src="https://github.com/user-attachments/assets/91f3d814-7b30-4532-8ece-a091746c1564" />
-
+<img width="1080" height="2400" alt="Screenshot_20261029_114454" src="https://github.com/user-attachments/assets/c2b7509a-755f-47bd-97aa-c79a42471c92" />
 
 ### 2. Layar Lebar (Landscape)
-<img width="650" height="498" alt="landscape" src="https://github.com/user-attachments/assets/4eb4ed44-f26b-4765-bafd-1823cefb5693" />
+<img width="2400" height="1080" alt="Screenshot_20261029_114510" src="https://github.com/user-attachments/assets/56b582e9-1f28-4964-a974-8cb7b928e3ed" />
 
 ---
 

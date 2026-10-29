@@ -34,18 +34,18 @@ Aplikasi pencatat daftar tontonan (film dan drama) sederhana berbasis **Jetpack 
 
 ## Contoh Alur UDF (Unidirectional Data Flow)
 
-Berikut adalah satu contoh alur **Unidirectional Data Flow (UDF)** saat pengguna **menambahkan judul film/drama baru**:
+Alur Data Satu Arah (UDF) Saat Menambah Film Baru:
 
-1. **Event UI (UI → ViewModel):**
-   - Pengguna mengetik judul pada `OutlinedTextField`, yang memicu callback `onTitleChange(newTitle)` untuk memperbarui `titleInput` di `WatchListViewModel`.
-   - Pengguna menekan tombol **"Tambah ke WatchList"**, yang memanggil fungsi `watchListViewModel.addMovie()`.
-2. **Pemrosesan & Pembaruan State di ViewModel:**
-   - `WatchListViewModel` memeriksa apakah `titleInput.trim()` kosong.
-   - **Jika kosong:** `_uiState.update { it.copy(validationMessage = "Judul film atau drama tidak boleh kosong.") }` dipanggil untuk menampilkan pesan error.
-   - **Jika valid:** Objek `Movie` baru dibuat, lalu `_uiState.update { ... }` memperbarui `WatchListUiState` dengan menambahkan item ke `movies`, mengosongkan `titleInput = ""`, dan menghapus `validationMessage = null`.
-3. **Pembaruan UI (StateFlow → UI):**
-   - `WatchListApp` mengamati `uiState: StateFlow<WatchListUiState>` menggunakan `collectAsStateWithLifecycle()`.
-   - Saat nilai `uiState` berubah, `WatchListScreen` otomatis melakukan *recomposition*: kolom teks kembali kosong, jumlah daftar bertambah, dan item film baru langsung tampil di dalam `LazyColumn`.
+1. Event UI (Layar → ViewModel):
+Pengguna mengetik judul film lalu menekan tombol "Tambah ke WatchList". Aksi ini memicu fungsi addMovie() di ViewModel.
+
+2. Pemrosesan di ViewModel:
+ViewModel memeriksa judul yang dimasukkan:
+- Jika kosong: Menampilkan pesan error peringatan.
+- Jika valid: Membuat data film baru, menambahkannya ke dalam daftar, mengosongkan kolom input teks, dan menghapus pesan error.
+
+3. Pembaruan Tampilan UI (ViewModel → Layar):
+Layar selalu memantau perubahan data. Begitu data baru masuk, Jetpack Compose otomatis memperbarui tampilan layar secara instan: kotak ketikan kembali kosong dan kartu film baru langsung muncul di daftar.
 
 ---
 
@@ -72,9 +72,3 @@ Berikut adalah satu contoh alur **Unidirectional Data Flow (UDF)** saat pengguna
 4. Pilih perangkat **Emulator** (atau perangkat Android fisik) pada toolbar atas, lalu klik tombol **Run ▶ (`app`)**.
 
 ---
-
-## Referensi
-
-- [Android Developers — Guide to App Architecture (MVVM & UDF)](https://developer.android.com/topic/architecture)
-- [Android Developers — State and Jetpack Compose (`StateFlow` & `collectAsStateWithLifecycle`)](https://developer.android.com/develop/ui/compose/state)
-- [Android Developers — Build Adaptive Apps in Jetpack Compose](https://developer.android.com/develop/ui/compose/layouts/adaptive)
